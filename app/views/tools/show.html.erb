@@ -1,2 +1,4 @@
-<h1>Tools#show</h1>
-<p>Find me in app/views/tools/show.html.erb</p>
+<h1> <%= @tool.name %> </h1>
+<p> Category: <%= @tool.category %> </p>
+<p> by <%= @tool.user.first_name %> <%= @tool.user.last_name %></p>
+<p> Description: <%= @tool.description %> </p>
