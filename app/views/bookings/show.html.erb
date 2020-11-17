@@ -1,2 +1,15 @@
-<h1>Bookings#show</h1>
-<p>Find me in app/views/bookings/show.html.erb</p>
+<div class="container">
+<h1>Your Booking</h1>
+
+<h3> Details about this booking: </h3>
+<p> Tool: <%= @booking.tool.name %> </p>
+<p> Category: <%= @booking.tool.category %></p>
+<p> Owner: <%= @tool_owner.first_name %> <%= @tool_owner.last_name %> </p>
+<p> Start date: <%= @booking.start_date %> </p>
+<p> End date: <%= @booking.end_date %></p>
+
+<%= link_to 'All my bookings', bookings_path %>
+
+</div>
+
+
