@@ -1,7 +1,9 @@
 <h1>Add a new tool</h1>
-<%= simple_form_for ([@user, @tool]) do |f| %>
+<%= simple_form_for @tool do |f| %>
   <%= f.input :name %>
   <%= f.input :category %>
   <%= f.input :description %>
   <%= f.submit %>
 <% end %>
+
+<%= link_to 'back to all tools', tools_path  %>

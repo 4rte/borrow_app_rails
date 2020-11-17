@@ -1,8 +1,15 @@
-<h1>Tools#index</h1>
 
-<% @tools.each do |tool| %>
-<li>
-  <ul> <%= tool.name %> | <%= tool.category %> | <%= tool.description %> </ul>
-</li>
-<% end %>
+<div class="container">
+  <h1>All tools</h1>
+
+  <% @tools.each do |tool| %>
+  <li>
+    <ul> <%= link_to tool.name, tool_path(tool) %> | <%= tool.category %> | <%= tool.description %> </ul>
+  </li>
+  <% end %>
+
+  <% if current_user  %>
+    <%= link_to 'Add a new tool', new_tool_path  %>
+  <% end %>
+</div>
 

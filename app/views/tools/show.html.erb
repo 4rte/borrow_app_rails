@@ -1,4 +1,10 @@
-<h1> <%= @tool.name %> </h1>
-<p> Category: <%= @tool.category %> </p>
-<p> by <%= @tool.user.first_name %> <%= @tool.user.last_name %></p>
-<p> Description: <%= @tool.description %> </p>
+<div class="container">
+  <h1> <%= @tool.name %> </h1>
+  <p> Category: <%= @tool.category %> </p>
+  <% if current_user  %>
+    <p> by <%= @tool.user.first_name %> <%= @tool.user.last_name %></p>
+  <% end %>
+  <p> Description: <%= @tool.description %> </p>
+
+  <%= link_to 'back to all tools', tools_path  %>
+</div>
