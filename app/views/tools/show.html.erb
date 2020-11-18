@@ -13,8 +13,12 @@
       <p> by <%= @tool.user.first_name %> <%= @tool.user.last_name %></p>
     <% end %>
     <p> Description: <%= @tool.description %> </p>
+    <%= link_to 'Book this tool', new_tool_booking_path(@tool) %>
   </div>
   <div class="btn-tool mt-2">
     <%= link_to 'Back to all tools', tools_path %>
+  </div>
+  <div class="btn-tool mt-2">
+    <%= link_to 'Book this tool', new_tool_booking_path(@tool) %>
   </div>
 </div>

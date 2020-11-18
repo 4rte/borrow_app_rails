@@ -1,12 +1,16 @@
 <%= render 'shared/banner' %>
-<div class="home-banner">
+<!-- <div class="home-banner">
   <h1>Le Wagon</h1>
-</div>
+</div> -->
+
 
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-6">
-      <%= "Lorem ipsum dolor sit amet, consectetur adipisicing elit " * 100 %>
+    <div class="btn-tool">
+      <%= link_to 'Add a new tool', new_tool_path  %>
+    </div>
+    <div class="btn-tool">
+      <%= link_to 'See all tools', tools_path  %>
     </div>
   </div>
 </div>
