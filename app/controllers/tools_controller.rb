@@ -16,6 +16,9 @@ class ToolsController < ApplicationController
   def show
     @tool = Tool.find(params[:id])
     authorize @tool
+    @marker = [{lat: @tool.latitude,
+                lng: @tool.longitude}
+              ]
   end
 
   def new
