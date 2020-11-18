@@ -1,10 +1,14 @@
 <div class="container">
   <h1> <%= @tool.name %> </h1>
-  <p> Category: <%= @tool.category %> </p>
-  <% if current_user  %>
-    <p> by <%= @tool.user.first_name %> <%= @tool.user.last_name %></p>
-  <% end %>
-  <p> Description: <%= @tool.description %> </p>
-
-  <%= link_to 'back to all tools', tools_path  %>
+  <img src="https://source.unsplash.com/350x200/?tool" />
+  <div class="card-details">
+    <p> Category: <%= @tool.category %> </p>
+    <% if current_user  %>
+      <p> by <%= @tool.user.first_name %> <%= @tool.user.last_name %></p>
+    <% end %>
+    <p> Description: <%= @tool.description %> </p>
+  </div>
+  <div class="btn-tool mt-2">
+    <%= link_to 'Back to all tools', tools_path %>
+  </div>
 </div>
