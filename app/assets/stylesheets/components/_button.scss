@@ -39,3 +39,22 @@
   background: linear-gradient(#147EFF, #0F67DA);
   color: white;
 }
+
+.btn-tool {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #16ACC8;
+  transition: background 0.3s ease;
+  display: inline-block;
+  font-family: raleway;
+}
+
+.btn-tool:hover {
+  background: purple;
+}
+
+.btn-tool a {
+  color: white ;
+  text-decoration: none ;
+}

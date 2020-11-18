@@ -5,11 +5,14 @@
   <%= f.input :name %>
   <%= f.input :category %>
   <%= f.input :description %>
+  <%= f.input :address %>
   <%= f.input :photo, as: :file %>
   <%= f.button :submit, class: "btn btn-flat mb-4"%>
+  <div class="btn btn-flat mb-4 btn-tool">
+    <%= link_to 'Back to all tools', tools_path  %>
+  </div>
 <% end %>
 
-<%= link_to 'back to all tools', tools_path  %>
 
 </div>
 
