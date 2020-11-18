@@ -34,10 +34,12 @@ import "bootstrap";
 // });
 
 import { initUpdateNavbarOnScroll } from '../components/navbar';
+import { initMapbox } from '../plugins/init_mapbox';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
   initUpdateNavbarOnScroll();
+  initMapbox();
 });
 
 console.log("Hello from app/javascript/packs/application.js!");

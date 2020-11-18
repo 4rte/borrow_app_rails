@@ -3,6 +3,14 @@ class ToolsController < ApplicationController
 
   def index
     @tools = policy_scope(Tool).order(created_at: :desc)
+     # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
+    @markers = @tools.geocoded.map do |tool|
+     {
+      lat: tool.latitude,
+      lng: tool.longitude,
+      infoWindow: render_to_string(partial: "info_window", locals: { tool: tool })
+     }
+    end
   end
 
   def show
