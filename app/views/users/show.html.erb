@@ -4,9 +4,9 @@
     <div class="card-body">
       <p> <%= @user.first_name %> <%= @user.last_name %> </p>
       <% if @user.photo.attached? %>
-          <%= cl_image_tag @user.photo.key, width: 150, height: 150, crop: :fill %>
+          <%= cl_image_tag @user.photo.key, width: 150, height: 150, crop: :fill, class: "img-circle" %>
           <% else %>
-          <%= image_tag "https://www.flaticon.com/svg/static/icons/svg/1077/1077114.svg",  class: "avatar" %>
+          <%= image_tag "https://www.flaticon.com/svg/static/icons/svg/1077/1077114.svg",  class: "avatar-large" %>
         <% end %>
         <div>
           <%= link_to 'Edit my profile', edit_user_path(@user)  %>
