@@ -52,9 +52,21 @@
 
 .btn-tool:hover {
   background: purple;
+  color: white;
 }
 
 .btn-tool a {
   color: white ;
   text-decoration: none ;
+}
+
+.btn-menu {
+  color: purple ;
+  font-family: raleway;
+}
+
+.btn-menu:hover {
+  color: #147EFF  ;
+  text-decoration: none ;
+  font-family: raleway;
 }

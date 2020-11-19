@@ -1,8 +1,0 @@
-<div class="container" style="min-height: 80vh">
-  <h1>Book <%= @tool.name %> </h1>
-  <%= simple_form_for ([@tool, @booking]) do |f| %>
-    <%= f.input :start_date, as: :date %>
-    <%= f.input :end_date, as: :date %>
-    <%= f.submit class: "btn btn-tool mb-5" %>
-  <% end %>
-</div>
