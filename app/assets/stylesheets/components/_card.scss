@@ -28,6 +28,8 @@
   align-items: center;
   margin-bottom: 16px;
   border-radius: 8px;
+  color: black;
+  text-decoration: none;
 }
 
 .card-product:hover {
@@ -59,6 +61,7 @@
 .card-product .card-product-infos {
   margin: 8px;
 }
+
 
 .card-details {
   overflow: hidden;
