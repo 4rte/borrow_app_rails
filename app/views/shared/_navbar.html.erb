@@ -19,7 +19,7 @@
         </li> -->
         <li class="nav-item dropdown">
           <% if current_user.photo.attached? %>
-          <%= cl_image_tag current_user.photo.key, width: 50, height: 50, crop: :fill, class: "avatar" , id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <%= cl_image_tag current_user.photo.key, width: 50, height: 50, crop: :fill, class: "avatar", style: "width: auto" , id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <% else %>
           <%= image_tag "https://www.flaticon.com/svg/static/icons/svg/1077/1077114.svg", class: "avatar" , id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false  %>
         <% end %>
