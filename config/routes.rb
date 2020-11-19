@@ -9,5 +9,5 @@ Rails.application.routes.draw do
 
   resources :tools, only: [:destroy]
   resources :bookings, only: [:show, :index]
-  resources :users, only: [:show, :index]
+  resources :users, only: [:show, :index, :edit, :update]
 end

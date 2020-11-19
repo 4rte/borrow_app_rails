@@ -1,0 +1,9 @@
+<div class="container" style="min-height: 80vh">
+  <%= simple_form_for @user do |f| %>
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :photo, as: :file %>
+    <%= f.button :submit, class: "btn btn-flat mb-4"%>
+  <% end %>
+  <%= link_to 'back to profile', user_path(@user) %>
+</div>
