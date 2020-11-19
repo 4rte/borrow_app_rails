@@ -1,19 +1,22 @@
-<div class="container", style="min-height: 80vh">
+<div class="container" style="min-height: 80vh; padding-top: 80px">
 
-<h1>Add a new tool</h1>
-<%= simple_form_for @tool do |f| %>
-  <%= f.input :name %>
-  <%= f.input :category, :collection => ['Manual DIY', 'Electrical DIY','Kitchen','Gardening'] %>
-  <%= f.input :description %>
-  <%= f.input :address %>
-  <%= f.input :photo, as: :file %>
-  <%= f.button :submit, class: "btn btn-flat mb-4"%>
-  <div>
+<h1 class= "text-center mb-5">Add a new tool</h1>
+<div class="card profile-card" style="width: 65%; height: 100%; box-shadow: 0 0 15px rgba(0,0,0,0.2); padding-left: 50px; padding-right: 50px; padding-top: 50px">
+  <%= simple_form_for @tool do |f| %>
+    <%= f.input :name %>
+    <%= f.input :category, :collection => ['Manual DIY', 'Electrical DIY','Kitchen','Gardening'] %>
+    <%= f.input :description %>
+    <%= f.input :address %>
+    <%= f.input :photo, as: :file %>
+    <div class="text-center mt-5">
+      <%= f.button :submit, class: "btn btn-flat mb-4"%>
+    </div>
+  <% end %>
+</div>
+
+  <div class="text-center m-5">
     <%= link_to 'Back to all tools', tools_path  %>
   </div>
-<% end %>
-
-
 </div>
 
 
