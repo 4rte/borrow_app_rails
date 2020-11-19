@@ -1,4 +1,4 @@
-class ToolPolicy < ApplicationPolicy
+class UserPolicy < ApplicationPolicy
   def show?
     true
   end
@@ -12,10 +12,6 @@ class ToolPolicy < ApplicationPolicy
   end
 
   def create?
-    true
-  end
-
-  def destroy?
     true
   end
 
