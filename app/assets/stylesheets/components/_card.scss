@@ -1,19 +1,18 @@
-// .main-container {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr 1fr;
-//   grid-gap: 16px;
-// }
+.main-container {
+  display: flex;
+}
 
 .card-product {
   overflow: hidden;
   height: 120px;
-  width: 350px;
+  // width: 350px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-
+  margin-bottom: 16px;
 }
+
 
 .card-product img {
   height: 100%;
@@ -54,4 +53,27 @@
   font-size: 12px;
   line-height: 1.4;
   opacity: .7;
+}
+
+.cards {
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 8px;
+  flex-grow: 1;
+  width: 66%;
+}
+
+.card {
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  border-radius: 1px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 22px;
+  color: white;
+  font-weight: bolder;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+  margin-top: 8px;
 }
