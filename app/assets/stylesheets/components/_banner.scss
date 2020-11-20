@@ -7,10 +7,11 @@
   justify-content: left;
   min-height: 100vh;
   background-color: rgba(161,212,225,100);
+  // background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1594300978785-1824616e0ab9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2154&q=80);
 }
 
 .banner h1 {
-  color: #000B1D;
+  color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 175px;
   font-weight: bold;
