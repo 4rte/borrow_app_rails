@@ -1,8 +1,9 @@
 #profile-page {
   min-height: 80vh;
-  margin-top: 80px;
+  padding-top: 100px;
   padding-left: 10vw;
   padding-right: 10vw;
+  background-color: #E5DEE4;
 }
 
 .profile-card {
@@ -10,4 +11,13 @@
   padding: 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 8px;
+  background-color: white;
+}
+
+#welcome-message {
+  font-family: Goldman;
+}
+
+#user-name {
+  font-family: Catamaran;
 }

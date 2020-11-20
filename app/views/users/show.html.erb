@@ -1,7 +1,8 @@
-<div class="container" style="min-height: 80vh; padding-top: 80px">
-  <div class="card text-center profile-card p-2" style="width: 20rem">
+<div id="profile-page">
+  <div class="profile-card p-2">
     <div class="card-body">
-      <p><strong> <%= @user.first_name %> <%= @user.last_name %> </strong></p>
+      <p id="welcome-message">Welcome back</p>
+      <p id="user-name"><strong> <%= @user.first_name %> <%= @user.last_name %> </strong></p>
       <% if @user.photo.attached? %>
           <%= cl_image_tag @user.photo.key, width: 150, height: 150, crop: :fill, class: "rounded-circle" %>
           <% else %>
@@ -14,7 +15,7 @@
   </div>
 
 
-  <h1 class="mt-5">My tools</h1>
+  <h1 class="mt-5">my tools</h1>
   <div class="card-bookings mb-5 mt-5">
     <% @user.tools.each do |tool| %>
         <div class="card-product">
@@ -31,7 +32,7 @@
   </div>
 
 
-  <h1 class="mt-5">My Bookings</h1>
+  <h1 class="mt-5">my bookings</h1>
 
   <div class="card-bookings mb-5 mt-5">
     <% @user.bookings.each do |booking| %>
