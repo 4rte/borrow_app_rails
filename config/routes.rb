@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   end
 
   resources :tools, only: [:destroy]
-  resources :bookings, only: [:show, :index]
+
+  resources :bookings, only: [:show, :index] do
+    resources :reviews, only: [:create]
+  end
+
   resources :users, only: [:show, :index, :edit, :update]
 end
