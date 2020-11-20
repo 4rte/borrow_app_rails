@@ -1,6 +1,6 @@
-<div class="container" style="min-height: 80vh; padding-top: 80px">
+<div class="screen">
 
-<h1 class= "text-center mb-5">Add a new tool</h1>
+<h1 class= "mb-5">Add a new tool</h1>
 <div class="card profile-card" style="width: 65%; height: 100%; box-shadow: 0 0 15px rgba(0,0,0,0.2); padding-left: 50px; padding-right: 50px; padding-top: 50px">
   <%= simple_form_for @tool do |f| %>
     <%= f.input :name %>
@@ -14,9 +14,7 @@
   <% end %>
 </div>
 
-  <div class="text-center m-5">
+  <div class="m-5">
     <%= link_to 'Back to all tools', tools_path  %>
   </div>
 </div>
-
-
