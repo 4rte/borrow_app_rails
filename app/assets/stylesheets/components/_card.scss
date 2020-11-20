@@ -2,15 +2,6 @@
   display: flex;
 }
 
-.profile-card {
-  margin: auto;
-  width: 50%;
-  padding: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  border-radius: 8px;
-}
-
-
 .card-bookings {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
