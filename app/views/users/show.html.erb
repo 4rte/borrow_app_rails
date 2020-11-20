@@ -1,6 +1,6 @@
 <div class="screen">
   <div class="profile-card p-2">
-    <div class="card-body">
+    <div class="card-body" style="d-flex flex-row">
       <p id="welcome-message">Welcome back</p>
       <p id="user-name"><strong> <%= @user.first_name %> <%= @user.last_name %> </strong></p>
       <% if @user.photo.attached? %>
