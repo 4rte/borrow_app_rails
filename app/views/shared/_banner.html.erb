@@ -4,18 +4,20 @@
     <div>
       <h1>BORROW</h1>
     </div>
+
     <div>
       <p id="tools-tagline">get the tools you need when & where you need 'em</p>
       <p id="sub-tagline">no need to buy 'em</p>
     </div>
-    <div class="container" style="width: 80vh">
+
+    <div id="search-bar">
       <%= form_tag tools_path, method: :get do %>
         <%= text_field_tag :query,
           params[:query],
           class: "form-control",
-          placeholder: "Find a tool in your city"
+          placeholder: "find 'em"
         %>
-        <%= submit_tag "Search", class: "mt-2 btn btn-tool" %>
+        <%= submit_tag "go", id: "search-button", class: "btn btn-tool" %>
       <% end %>
     </div>
   </div>

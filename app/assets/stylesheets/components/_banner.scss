@@ -15,7 +15,6 @@
   font-size: 175px;
   font-weight: bold;
   margin-left: -10px;
-
 }
 
 #tools-tagline {
@@ -32,15 +31,26 @@
   font-family: $body-font;
 }
 
-.search-form-control {
-  position: relative;
+#search-bar {
+  max-width: 880px;
 }
 
-.search-form-control .btn {
-  position: absolute;
-  top: 8px;
-  bottom: 8px;
-  right: 8px;
+#search-bar>* {
+  display: flex;
+  flex-direction: row;
+}
+
+#search-bar .form-control {
+  height: 50px;
+}
+
+#search-button {
+  margin-left: 5px;
+  border-radius: 10px;
+}
+
+.search-form-control {
+  position: relative;
 }
 
 .search-form-control .form-control {
