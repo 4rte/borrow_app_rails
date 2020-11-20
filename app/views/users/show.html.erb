@@ -1,7 +1,7 @@
 <div class="screen">
-  <div class="profile-card p-2">
+  <div class="profile-info text-center p-2">
     <div class="card-body" style="d-flex flex-row">
-      <p id="welcome-message">Welcome back</p>
+      <h3 id="welcome-message">Welcome back</h3>
       <p id="user-name"><strong> <%= @user.first_name %> <%= @user.last_name %> </strong></p>
       <% if @user.photo.attached? %>
           <%= cl_image_tag @user.photo.key, width: 150, height: 150, crop: :fill, class: "rounded-circle" %>
@@ -9,7 +9,7 @@
           <%= image_tag "https://www.flaticon.com/svg/static/icons/svg/1077/1077114.svg",  class: "avatar-large" %>
         <% end %>
         <div class="mt-4">
-          <%= link_to '✏️', edit_user_path(@user)  %>
+          <%= link_to 'Edit ✏️', edit_user_path(@user)  %>
         </div>
     </div>
   </div>

@@ -1,33 +1,33 @@
-<div class="container" style="min-height: 80vh; padding-top: 80px">
+<div class="container" style=" padding-top: 80px">
   <h1 class="text-center mb-5">your tools are ready to be borrowed</h1>
 
-  <div class="text-center profile-card mb-5" style="display: flex; padding-left: 50px; padding-right: 50px; padding-top: 50px; padding-bottom: 20px">
-    <div style="width: 50%; height: 300px;">
-        <% if false %>
-          <%= image_tag @booking.tool.photo.key, height: 200, crop: :fill %>
+  <div class="profile-card mb-5" style="display: flex;">
+    <div style="width: 33%; height: 300px;" class="profile-pic">
+        <% if @booking.tool.photo.attached? %>
+          <%= cl_image_tag @booking.tool.photo.key, height: 200, crop: :fill, class: "text-center" %>
           <% else %>
-          <img src="https://images.unsplash.com/photo-1566937169390-7be4c63b8a0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="tool" width="500">
+          <img src="https://images.unsplash.com/photo-1566937169390-7be4c63b8a0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="tool" width="500" class="text-center">
         <% end %>
     </div>
-    <div style="width: 50%; height: 300px;">
-        <p> Tool: <%= @booking.tool.name %> </p>
-        <p> Category: <%= @booking.tool.category %> </p>
-        <% if current_user  %>
-          <p> by <%= @booking.tool.user.first_name %> <%= @booking.tool.user.last_name %></p>
-        <% end %>
-        <p> Description: <%= @booking.tool.description %> </p>
-        <p> Start date: <%= @booking.start_date %> </p>
-      <p> End date: <%= @booking.end_date %></p>
-    </div>
+      <div style="width: 66%; height: 300px; padding-top: 20px;">
+          <p style="font-size: 30px"> <strong><%= @booking.tool.name %></strong> </p>
+          <p> <strong>Category:</strong> <%= @booking.tool.category %> </p>
+          <% if current_user  %>
+            <p> <strong>by:</strong> <%= @booking.tool.user.first_name %> <%= @booking.tool.user.last_name %></p>
+          <% end %>
+          <p> <strong>Description:</strong> <%= @booking.tool.description %> </p>
+          <p> <strong>Start date:</strong> <%= @booking.start_date %> </p>
+        <p> <strong>End date:</strong> <%= @booking.end_date %></p>
+      </div>
   </div>
   <div class="row" style="display: flex;">
-    <div class="container card m-2 p-5 text-center" style="width: 45%; height: 100%; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
+    <div class="container card p-5 text-center" style="width: 50%; height: 100%; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
      <h2 class="pb-4">What other people say about </br> <%= @booking.tool.name %></h2>
-      <% if @booking.reviews.empty? %>
+      <% if @booking.tool.reviews.empty? %>
         <p>Be the first to leave a review</p>
         <% else %>
           <ul class="list-group">
-            <% @booking.reviews.each do |review| %>
+            <% @booking.tool.reviews.each do |review| %>
               <li class="list-group-item d-flex justify-content-between align-items-center">
                 <%= review.content %>
                 <span class="badge badge-primary badge-pill">
@@ -43,7 +43,7 @@
         <% end %>
       </div>
 
-    <div class="container card m-2 p-5" style="width: 45%; height: 100%; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
+    <div class="container card p-5" style="width: 45%; height: 100%; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
        <h2 class="pb-4  text-center"> Share your opinion with others </h2>
         <%= simple_form_for ([@booking, @review]) do |f| %>
           <%= f.input :content, as: :text %>

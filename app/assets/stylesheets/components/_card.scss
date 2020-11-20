@@ -24,13 +24,32 @@
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 32%;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  -webkit-transition: -webkit-filter ease 1s;
+  -moz-transition: -moz-filter ease 1s;
+  -o-transition: -o-filter ease 1s;
+  -ms-transition: -ms-filter ease 1s;
+  transition: filter ease 0.3s;
+}
+
+.card-category:hover {
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  filter: grayscale(20%);
+  -webkit-filter: grayscale(20%);
+  -moz-filter: grayscale(20%);
+  -ms-filter: grayscale(20%);
+  -o-filter: grayscale(20%);
 }
 
 
 .card-product {
   overflow: hidden;
   height: 120px;
-  // width: 350px;
+  width: 100%;
   background: white;
   display: flex;
   align-items: center;
@@ -40,10 +59,10 @@
   text-decoration: none;
 }
 
-.card-map {
+.card-marker {
   overflow: hidden;
   height: 120px;
-  // width: 350px;
+  width: 200px;
   background: white;
   display: flex;
   align-items: center;
@@ -52,6 +71,41 @@
   color: black;
   text-decoration: none;
 }
+
+
+.card-marker img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-marker h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-marker p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-map {
+  overflow: hidden;
+  height: 120px;
+  width: 350px;
+  background: white;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  color: black;
+  text-decoration: none;
+}
+
 
 .card-map img {
   height: 100%;
@@ -76,7 +130,6 @@
 .card-product:hover {
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   transition: 0.2s;
-
 }
 
 .card-product img {

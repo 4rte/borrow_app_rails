@@ -1,6 +1,6 @@
 <div class="screen main-container">
   <div class="tools">
-    <h2 class="mb-5">tools</h2>
+    <h2 class="mb-5 text-center">tools</h2>
 
     <% @tools.each do |tool| %>
       <%= link_to tool_path(tool), style:"text-decoration: none" do  %>
@@ -20,7 +20,7 @@
   </div>
 
   <div id="map"
-    style="width: 100vh; height: 100vh; margin-top: 62px"
+    style="width: 100vh; height: 100vh; margin-top: 85px"
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
