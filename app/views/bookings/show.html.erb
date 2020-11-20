@@ -20,7 +20,40 @@
       <p> End date: <%= @booking.end_date %></p>
     </div>
   </div>
- <div class="text-center mb-5"> <%= link_to 'Your bookings', bookings_path, class: "btn btn-tool" %></div>
+  <div class="row" style="display: flex;">
+    <div class="container card m-2 p-5 text-center" style="width: 45%; height: 100%; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
+     <h2 class="pb-4">What other people say about </br> <%= @booking.tool.name %></h2>
+      <% if @booking.reviews.empty? %>
+        <p>Be the first to leave a review</p>
+        <% else %>
+          <ul class="list-group">
+            <% @booking.reviews.each do |review| %>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <%= review.content %>
+                <span class="badge badge-primary badge-pill">
+                  <% counter = 0 %>
+                  <% 5.times do %>
+                    <i class="fa <%= review.rating > counter ? 'fa-star' : 'fa-star-o' %>"></i>
+                    <% counter += 1 %>
+                  <% end %>
+                </span>
+              </li>
+            <% end %>
+          </ul>
+        <% end %>
+      </div>
 
+    <div class="container card m-2 p-5" style="width: 45%; height: 100%; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
+       <h2 class="pb-4  text-center"> Share your opinion with others </h2>
+        <%= simple_form_for ([@booking, @review]) do |f| %>
+          <%= f.input :content, as: :text %>
+          <%= f.input :rating, as: :integer%>
+          <div class="text-center">
+            <%= f.submit class: "btn btn-tool mt-5"  %>
+          </div>
+        <% end %>
+      </div>
+
+  </div>
 </div>
 

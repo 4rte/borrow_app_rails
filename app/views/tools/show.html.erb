@@ -34,6 +34,33 @@
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
 
+  <div>
+
+
+
+    <% unless @tool.reviews.empty? %>
+      <div class="container card m-2 p-5 text-center" style="width: 100%; height: 100%; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
+        <h2 class="pb-4">What other people say about </br> <%= @tool.name %></h2>
+          <ul class="list-group">
+            <% @tool.reviews.each do |review| %>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <%= review.content %>
+                <span class="badge badge-primary badge-pill">
+                  <% counter = 0 %>
+                  <% 5.times do %>
+                    <i class="fa <%= review.rating > counter ? 'fa-star' : 'fa-star-o' %>"></i>
+                    <% counter += 1 %>
+                  <% end %>
+                </span>
+              </li>
+            <% end %>
+          </ul>
+        <% end %>
+      </div>
+
+
+
+  </div>
   <div class="text-center m-5"><%= link_to 'Back to all tools', tools_path, class: "btn btn-tool" %> </div>
 
 </div>

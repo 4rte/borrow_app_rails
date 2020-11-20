@@ -5,13 +5,14 @@ class ReviewsController < ApplicationController
   end
 
   def create
+    @booking = Booking.find(params[:booking_id])
     @review = Review.new(review_params)
-    @tool = Tool.find(params[:tool_id])
-    @review.tool = @tool
+    @review.booking = @booking
+    authorize @review
     if @review.save
-      redirect_to tool_path(@tool)
+      redirect_to booking_path(@booking)
     else
-      render :new
+      render 'bookings/show'
     end
   end
 
