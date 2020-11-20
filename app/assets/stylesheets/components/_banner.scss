@@ -1,37 +1,57 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  padding: 10vw;
   display: flex;
-  align-items:center;
-  justify-content: center;
+  align-items: center;
+  justify-content: left;
+  min-height: 100vh;
+  background-color: rgba(161,212,225,100);
+  // background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1594300978785-1824616e0ab9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2154&q=80);
 }
 
 .banner h1 {
-  margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
+  font-size: 175px;
   font-weight: bold;
+  margin-left: -10px;
 }
 
-.banner p {
-  font-size: 20px;
-  color: white;
+#tools-tagline {
+  font-size: 33px;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-family: $body-font;
 }
 
-.search-form-control {
-  position: relative;
+#sub-tagline {
+  font-size: 27px;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-family: $body-font;
 }
 
-.search-form-control .btn {
-  position: absolute;
-  top: 8px;
-  bottom: 8px;
-  right: 8px;
+#search-bar {
+  max-width: 880px;
+}
+
+#search-bar>* {
+  display: flex;
+  flex-direction: row;
+}
+
+#search-bar .form-control {
+  height: 50px;
+}
+
+#search-button {
+  margin-left: 5px;
+  border-radius: 10px;
+}
+
+.search-form-control {
+  position: relative;
 }
 
 .search-form-control .form-control {

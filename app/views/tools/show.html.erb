@@ -1,10 +1,10 @@
-<div class="container" style="min-height: 80vh">
+<div class="screen">
+  <h2 class="mb-5"> <%= @tool.name %> </h2>
 
-  <h1 class="text-center mb-5"> <%= @tool.name %> </h1>
   <div class="row justify-content-between mb-5" >
     <div class="card p-2 text-center m-2" style="width: 30%; height: 350px; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
-      <% if @tool.photo.attached? %>
-        <%= cl_image_tag @tool.photo.key, height: 200, crop: :fit %>
+      <% if false %>
+        <%= image_tag @tool.photo.key, height: 200, crop: :fit %>
         <% else %>
         <img src="https://images.unsplash.com/photo-1566937169390-7be4c63b8a0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="tool" width="500">
       <% end %>

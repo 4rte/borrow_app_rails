@@ -1,46 +1,47 @@
-<div class="container">
-  <h1>Your profile</h1>
-  <div class="card text-center p-2" style="width: 20rem;">
+<div class="screen">
+  <div class="profile-card p-2">
     <div class="card-body">
-      <p> <%= @user.first_name %> <%= @user.last_name %> </p>
-      <% if @user.photo.attached? %>
-          <%= cl_image_tag @user.photo.key, width: 150, height: 150, crop: :fill, class: "img-circle" %>
+      <p id="welcome-message">Welcome back</p>
+      <p id="user-name"><strong> <%= @user.first_name %> <%= @user.last_name %> </strong></p>
+      <% if false %>
+          <%= image_tag @user.photo.key, width: 150, height: 150, crop: :fill, class: "rounded-circle" %>
           <% else %>
           <%= image_tag "https://www.flaticon.com/svg/static/icons/svg/1077/1077114.svg",  class: "avatar-large" %>
         <% end %>
-        <div>
-          <%= link_to 'Edit my profile', edit_user_path(@user)  %>
+        <div class="mt-4">
+          <%= link_to '✏️', edit_user_path(@user)  %>
         </div>
     </div>
   </div>
 
 
-  <h1>My tools</h1>
-  <div style="display: flex; justify-content: space-around;" class="mb-5 mt-5">
+  <h2 class="mt-5">my tools</h2>
+  <div class="card-bookings mb-5 mt-5">
     <% @user.tools.each do |tool| %>
-      <div class="card-product m-2">
-        <% if tool.photo.attached? %>
-          <%= cl_image_tag tool.photo.key, width: 400, crop: :fill %>
-        <% else %>
-          <img src="https://images.unsplash.com/photo-1566937169390-7be4c63b8a0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="booking" width="500">
-        <% end %>
-        <div class="card-product-infos">
-          <p><%= link_to tool.name, tool_path(tool) %> | <%= link_to '🗑', tool_path(tool), method: :delete, data:{confirm: 'Are you sure you want to delete this tool?', disable_with: 'Processing' } %></p>
+        <div class="card-product m-2">
+          <% if false %>
+            <%= image_tag tool.photo.key, width: 400, crop: :fill %>
+            <% else %>
+            <img src="https://images.unsplash.com/photo-1566937169390-7be4c63b8a0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="booking" width="500">
+          <% end %>
+          <div class="card-product-infos">
+            <h2><%= link_to tool.name, tool_path(tool) %> | <%= link_to '🗑', tool_path(tool), method: :delete, data:{confirm: 'Are you sure you want to delete this tool?', disable_with: 'Processing' } %></h2>
+          </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
   </div>
 
 
-  <h1>My Bookings</h1>
-  <div style="display: flex; justify-content: space-around;" class="mb-5 mt-5">
+  <h2 class="mt-5">my bookings</h2>
+
+  <div class="card-bookings mb-5 mt-5">
     <% @user.bookings.each do |booking| %>
       <div class="card-product m-2">
-        <% if booking.tool.photo.attached? %>
-          <%= cl_image_tag booking.tool.photo.key, width: 400, crop: :fill %>
+        <% if false %>
+        <%= image_tag booking.tool.photo.key, width: 400, crop: :fill %>
         <% else %>
-          <img src="https://images.unsplash.com/photo-1566937169390-7be4c63b8a0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="booking" width="500">
-        <% end %>
+        <img src="https://images.unsplash.com/photo-1566937169390-7be4c63b8a0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="booking" width="500">
+      <% end %>
         <div class="card-product-infos">
           <h2><%= link_to booking.tool.name, booking_path(booking) %></h2>
           <p>from <%= booking.start_date %> to <%= booking.end_date %></p>
@@ -48,4 +49,5 @@
       </div>
     <% end %>
   </div>
+
 </div>
