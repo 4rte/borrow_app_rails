@@ -1,5 +1,6 @@
-<div class="screen" style="min-height: 80vh; padding-top: 80px">
-  <h1 class="mb-5"> <%= @tool.name %> </h1>
+<div class="screen">
+  <h2 class="mb-5"> <%= @tool.name %> </h2>
+
   <div class="row justify-content-between mb-5" >
     <div class="card p-2 text-center m-2" style="width: 30%; height: 350px; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
       <% if @tool.photo.attached? %>

@@ -1,6 +1,7 @@
-<div class="screen main-container" style="padding-top: 80px">
-  <div class="cards" >
-    <h2 class="mb-4"> Tools</h2>
+<div class="screen main-container">
+  <div class="tools">
+    <h2 class="mb-5">tools</h2>
+
     <% @tools.each do |tool| %>
       <%= link_to tool_path(tool), style:"text-decoration: none" do  %>
         <div class="card-product">
@@ -18,13 +19,13 @@
     <% end %>
   </div>
 
-
-    <div id="map"
-      style="width: 100vh; height: 100vh; margin-top: 62px"
-      data-markers="<%= @markers.to_json %>"
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-    </div>
+  <div id="map"
+    style="width: 100vh; height: 100vh; margin-top: 62px"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 
 
 </div>
+
 <div class="text-center m-5"><%= link_to 'Back to Homepage', root_path, class: "btn btn-tool" %> </div>
