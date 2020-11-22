@@ -4,26 +4,24 @@
   background-color: transparent;
   transition: 0.5s background-color ease;
   font-family: raleway;
+  color: #FFFFFF;
 }
 
 .navbar-home .navbar-collapse {
   flex-grow: 0;
-}
 
+}
 
 .navbar-home .navbar-brand img {
   width: 40px;
 }
 
-.navbar-lewagon-white {
-  background-color: white;
-}
-
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #6915DB;
   transition: 0.5s background-color ease;
   font-family: raleway;
+  color: #FFFFFF;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -32,4 +30,12 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+#nav-links {
+  color: white;
+}
+
+#nav-links:hover {
+  color: #FEB707;
 }

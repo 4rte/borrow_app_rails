@@ -1,5 +1,5 @@
 .btn-ghost {
-  color: #16ACC8;
+  color: #FEB707;
   border: 1px solid #4A4A4A;
   padding: 8px 24px;
   border-radius: 50px;
@@ -16,12 +16,12 @@
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
-  background: #16ACC8;
+  background: #FEB707;
   transition: background 0.3s ease;
 }
 
 .btn-flat:hover {
-  background: purple;
+  background: #6915DB;
   color: white;
 }
 
@@ -30,29 +30,51 @@
   padding: 8px 24px;
   border-radius: 4px;
   font-weight: bold;
-  background: linear-gradient(#167FFB, #0F60C4);
+  background: linear-gradient(#FEB707, #FEB707);
   transition: background 0.3s ease;
-  border: 1px solid #0F60C4;
+  border: 1px solid #FEB707;
 }
 
 .btn-gradient:hover {
-  background: linear-gradient(#147EFF, #0F67DA);
+  background: linear-gradient(#FEB707, #FEB707);
   color: white;
 }
 
 .btn-tool {
-  color: white;
-  padding: 8px 24px;
+  border: 2px solid #FEB707;
+  color: #FEB707;
   border-radius: 4px;
-  background: #16ACC8;
+  padding: 8px 24px;
   transition: background 0.3s ease;
   display: inline-block;
-  font-family: raleway;
+  font-family: Nunito;
+  font-weight: bolder;
 }
 
 .btn-tool:hover {
-  background: purple;
-  color: white;
+  border: 2px solid #6915DB;
+  color: #6915DB;
+  text-decoration: none;
+
+}
+
+.btn-banner {
+  border: 2px solid #FEB707;
+  color: #FEB707;
+  border-radius: 4px;
+  padding: 8px 24px;
+  transition: background 0.3s ease;
+  display: inline-block;
+  font-family: Nunito;
+  font-weight: bolder;
+
+}
+
+.btn-banner:hover {
+  background: #FEB707;
+  color: #6915DB;
+  text-decoration: none ;
+
 }
 
 .btn-tool a {
@@ -61,12 +83,12 @@
 }
 
 .btn-menu {
-  color: purple ;
-  font-family: raleway;
+  color: #6915DB ;
+  font-family: Nunito;
 }
 
 .btn-menu:hover {
-  color: #147EFF  ;
+  color: #FEB707  ;
   text-decoration: none ;
-  font-family: raleway;
+  font-family: Nunito;
 }
