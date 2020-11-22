@@ -1,3 +1,13 @@
+.step-card {
+  width: 100%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.step-card:hover {
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+
 .main-container {
   display: flex;
 }
@@ -16,11 +26,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  font-size: 40px;
-  font-family: Goldman;
-  font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 32%;
@@ -35,6 +40,19 @@
   -ms-transition: -ms-filter ease 1s;
   transition: filter ease 0.3s;
 }
+
+.card-category a {
+  color: white;
+  font-size: 40px;
+  font-family: Goldman;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.card-category:hover a {
+  text-decoration: none;
+}
+
 
 .card-category:hover {
   box-shadow: 0 0 15px rgba(0,0,0,0.5);
@@ -118,33 +136,57 @@
   font-weight: bold;
   margin: 0;
 }
-
-.card-map p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
-}
-
-.card-product:hover {
+.card-trip {
+  overflow: hidden;
+  background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-bottom: 16px;
+  border-radius: 8px;
+  color: black;
+  text-decoration: none;
+}
+.card-trip:hover {
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
   transition: 0.2s;
 }
-
-.card-product img {
-  height: 100%;
-  width: 120px;
+.card-trip > img {
+  height: 100px;
+  width: 100%;
   object-fit: cover;
 }
 
-.card-product h2 {
+.card-trip h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
-.card-product p {
+.card-trip p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-trip .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-trip-infos .card-trip-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+  border-radius: 50%;
+  height: auto;
+}
+
+
+.card-map p {
   font-size: 12px;
   line-height: 1.4;
   opacity: .7;
@@ -182,18 +224,3 @@
   margin-right: 16px;
 }
 
-// .card {
-//   background-size: cover;
-//   background-position: center;
-//   height: 150px;
-//   border-radius: 1px;
-//   box-shadow: 0 0 10px rgba(0,0,0,0.2);
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-around;
-//   font-size: 22px;
-//   color: white;
-//   font-weight: bolder;
-//   text-shadow: 0 0 10px rgba(0,0,0,0.7);
-//   margin-top: 8px;
-// }
