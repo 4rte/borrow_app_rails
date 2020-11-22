@@ -1,61 +1,29 @@
 <%= render 'shared/banner' %>
 
-<div class="container">
 
-<!--   <p class="home-header" style="height: 20vh">How does it work?</p>
- -->
-  <div id="categories">
-    <div class="home-container">
+<div id="categories">
 
-      <div class="card text-center step-card" style="width: 30%">
-        <%= link_to new_tool_path, style:"text-decoration: none" do  %>
-           <%= image_tag "/assets/1", class:"card-img-top" %>
-          <div class="card-body">
-            <h5 class="card-step-title" style="color: black">Register your pet</h5>
-          </div>
-          <% end %>
-      </div>
+  <p class="mt-5">What type of tools do you need?</p>
 
+  <div class="home-container">
+    <div class="card-category" style="background-image: url(https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1540103711724-ebf833bde8d1%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26w%3D1055%26q%3D80)">
+      DIY
+    </div>
+    <div class="card-category" style="background-image: url(https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1589051039495-eb77709c8268%3Fixlib%3Drb-1.2.1%26auto%3Dformat%26fit%3Dcrop%26w%3D934%26q%3D80)">
+      Garden
+    </div>
 
-        <div class="card text-center step-card" style="width: 30%">
-          <%= link_to tools_path, style:"text-decoration: none" do  %>
-            <%= image_tag "/assets/2", class:"card-img-top" %>
-            <!-- <img src="/assets/images/2.png" class="card-img-top" alt="dog"> -->
-            <div class="card-body">
-              <h5 class="card-step-title" style="color: black">Check all pets</h5>
-            </div>
-          <% end %>
-        </div>
-
-
-      <div class="card  text-center step-card" style="width: 30%;">
-        <%= link_to tools_path, style:"text-decoration: none" do  %>
-          <%= image_tag "/assets/3", class:"card-img-top" %>
-          <div class="card-body">
-            <h5 class="card-step-title" style="color: black">Choose a date</h5>
-          </div>
-        <% end %>
-      </div>
+    <div class="card-category" style="background-image: url(https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1556910096-6f5e72db6803%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26w%3D1950%26q%3D80)">
+      Kitchen
     </div>
   </div>
-  <p class="home-header">Check all pets</p>
-  <div id="categories">
-    <div class="home-container">
 
-      <div class="card text-center step-card" style="width: 45%;">
-        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1627&q=80" class="card-img-top" alt="cat">
-        <div class="card-body">
-          <h5 class="card-step-title">Cats</h5>
-        </div>
-      </div>
+</div>
+<!--
+<div class="container" style="min-height: 100vh">
+  <div class="row justify-content-center">
 
-      <div class="card text-center step-card" style="width: 45%;">
-        <img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" class="card-img-top" alt="dog">
-        <div class="card-body">
-          <h5 class="card-step-title">Dogs</h5>
-        </div>
-      </div>
-
-    </div>
   </div>
 </div>
+
+ -->
