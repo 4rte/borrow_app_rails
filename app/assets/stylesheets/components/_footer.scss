@@ -1,5 +1,5 @@
 .footer {
-  background: #6915DB;
+  background: #16ACC870;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -13,7 +13,8 @@
   clear: both;
 }
 .footer-links {
-
+  display: flex;
+  align-items: center;
 }
 .footer-links a {
   color: #FFFFFF;
@@ -24,7 +25,7 @@
 }
 .footer-links a:hover {
   opacity: 1;
-  color: #FEB707;
+  color: purple;
 }
 .footer .fa-heart {
   color: #D23333;
@@ -34,8 +35,4 @@
   display: grid;
   min-height: 100vh;
   grid-template-rows: auto 1fr auto;
-}
-
-.footer-copyright {
-  color: #FFFFFF;
 }

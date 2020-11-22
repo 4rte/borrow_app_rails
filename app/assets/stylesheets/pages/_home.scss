@@ -1,26 +1,15 @@
 .home-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 40vh;
   align-items: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-.home-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: Nunito;
-  font-size: 40px;
 }
 
 #categories {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-
-.card-step-title {
-  font-size: 26px;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  background-color: #lightgrey;
+  color: #0E0000;
+  font-family: Catamaran;
+  font-size: 33px;
 }

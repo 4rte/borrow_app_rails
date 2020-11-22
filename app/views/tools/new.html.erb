@@ -1,21 +1,20 @@
 <div class="screen">
-  <h2 class= "text-center mb-5">Register your pet</h2>
-  <div style="display: flex; justify-content: center">
-    <div class="card profile-card" style="width: 65%; height: 100%; box-shadow: 0 0 15px rgba(0,0,0,0.2); padding-left: 50px; padding-right: 50px; padding-top: 50px">
-      <%= simple_form_for @tool do |f| %>
-        <%= f.input :name %>
-        <%= f.input :category, :collection => ['Cat', 'Dog'] %>
-        <%= f.input :description %>
-        <%= f.input :address %>
-        <%= f.input :photo, as: :file %>
-        <div class="text-center mt-5">
-          <%= f.button :submit, value:"Create Profile", class: "btn btn-flat mb-4"%>
-        </div>
-      <% end %>
-    </div>
+  <h2 class= "mb-5">add a new tool</h2>
+
+  <div class="card profile-card" style="width: 65%; height: 100%; box-shadow: 0 0 15px rgba(0,0,0,0.2); padding-left: 50px; padding-right: 50px; padding-top: 50px">
+    <%= simple_form_for @tool do |f| %>
+      <%= f.input :name %>
+      <%= f.input :category, :collection => ['Manual DIY', 'Electrical DIY','Kitchen','Gardening'] %>
+      <%= f.input :description %>
+      <%= f.input :address %>
+      <%= f.input :photo, as: :file %>
+      <div class="text-center mt-5">
+        <%= f.button :submit, class: "btn btn-flat mb-4"%>
+      </div>
+    <% end %>
   </div>
 
-  <div class="text-center m-5">
-    <%= link_to 'Back to all pets', tools_path, class: "btn-tool"  %>
+  <div class="m-5">
+    <%= link_to 'Back to all tools', tools_path  %>
   </div>
 </div>
